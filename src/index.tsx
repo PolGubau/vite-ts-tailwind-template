@@ -1,13 +1,15 @@
-import "./assets/styles/reset.scss";
+import "./assets/styles/global.css";
 
 import React from "react";
 import ReactDOM from "react-dom/client";
-
-import { App } from "./App";
+import AppProvider from "./Providers/AppProvider";
+import { RecoilRoot } from "recoil";
 
 const root = ReactDOM.createRoot(document.getElementById("root") as HTMLElement);
 root.render(
 	<React.StrictMode>
-		<App />
+		<RecoilRoot>
+			<AppProvider />
+		</RecoilRoot>
 	</React.StrictMode>
 );
