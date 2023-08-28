@@ -11,7 +11,6 @@ const useModal = (): {
 	const triger = useSetRecoilState<ModalProps>(modalState);
 
 	const closeModal = (): void => {
-		console.log("close modal");
 		triger({ isOpen: false });
 	};
 
@@ -34,7 +33,7 @@ const useModal = (): {
 	}: ModalProps): void => {
 		const handleHide = () => {
 			handleClose?.();
-			// closeModal();
+			closeModal();
 		};
 		triger({
 			isOpen,
@@ -55,7 +54,7 @@ const useModal = (): {
 	}: ModalProps): void => {
 		const handleHide = () => {
 			handleClose?.();
-			// closeModal();
+			closeModal();
 		};
 
 		triger({
